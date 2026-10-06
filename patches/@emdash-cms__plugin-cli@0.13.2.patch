@@ -1,0 +1,10 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -10003,5 +10003,5 @@
+ const WATCH_GLOBS = [
+-	"src/**",
++	"src",
+ 	"emdash-plugin.jsonc",
+ 	"package.json"
+ ];

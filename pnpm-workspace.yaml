@@ -1,0 +1,14 @@
+packages:
+  - "."
+
+patchedDependencies:
+  "@emdash-cms/plugin-cli@0.13.2": patches/@emdash-cms__plugin-cli@0.13.2.patch
+
+overrides:
+  "@emdash-cms/plugin-cli>typescript": "5.9.3"
+
+strictDepBuilds: true
+dangerouslyAllowAllBuilds: false
+allowBuilds:
+  esbuild: true
+  workerd: true

@@ -1,0 +1,21 @@
+{
+	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
+
+	"slug": "automations",
+	"publisher": "did:web:localhost",
+
+	"license": "MIT",
+	"author": { "name": "Local development" },
+	"security": { "email": "security@example.invalid" },
+	"description": "Automate your EmDash site with triggers and actions.",
+
+	// Minimal event, schema, network, and email access; no CMS write access.
+	// Changes to the trust contract require a version bump after release.
+	"capabilities": ["content:read", "media:read", "schema:read", "network:request:unrestricted", "email:send"],
+	"allowedHosts": [],
+	"storage": {
+    "automations": { "indexes": ["enabled", "triggerType", "updatedAt", ["enabled", "triggerType"]] },
+    "runs": { "indexes": ["automationId", "startedAt", ["automationId", "startedAt"]] }
+  },
+  "admin": { "pages": [{ "path": "/manage", "label": "Automations", "icon": "zap" }] }
+}
