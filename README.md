@@ -4,8 +4,7 @@
 
 A sandboxed EmDash plugin with a Block Kit admin page for creating, editing,
 enabling/disabling, deleting automations and inspecting recent execution history.
-Version 0.1.0 is an unpublished development candidate from
-[HandyPlugins](https://handyplugins.co). The selected publisher account is
+Developed by [HandyPlugins](https://handyplugins.co). The publisher account is
 `handyplugins.co`, pinned to DID `did:plc:6kdx7jauswq2awrp3yfxbbw5`.
 Security reports can be sent to `support@handyplugins.co`.
 
@@ -90,11 +89,18 @@ checks types, and runs sandbox tests before building and attesting the bundle.
 The workflow can also be started manually with the package selector
 `automations@0.1.0` for the current candidate.
 
-The package profile requires GitHub build provenance and publisher approval for
-every release. The publisher must authorize publishing in the
+The package profile permits direct local CLI releases without GitHub build
+provenance. Automated releases attach GitHub provenance and require publisher
+approval for every release. The publisher must authorize publishing in the
 [EmDash release dashboard](https://releases.emdashcms.com), approve the repository
 connection on its first run, and approve each release with a passkey. Account
 sessions remain outside Git and GitHub Actions secrets.
+
+For a direct release, sign in as the publisher with `emdash-plugin login`,
+verify the active account with `emdash-plugin whoami`, run the checks above,
+and run `corepack pnpm exec emdash-plugin publish` from the plugin directory.
+This builds the bundle, uploads it to the publisher's PDS, and creates the
+release record. It does not include GitHub build provenance.
 
 Update the package version before creating a release tag. Published versions
 are immutable. After publication, check the registry listing and test installing
