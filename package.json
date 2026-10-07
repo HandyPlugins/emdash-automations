@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/HandyPlugins/emdash-automations.git"
+		"url": "https://github.com/handyplugins/emdash-automations.git"
 	},
 	"engines": { "node": "24.21.0", "pnpm": "11.9.0" },
 	"main": "dist/index.mjs",
