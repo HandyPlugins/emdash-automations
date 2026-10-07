@@ -74,6 +74,10 @@ CLI 0.13.2 needs the included one-line `src/**` → `src` Chokidar watch patch a
 its TypeScript dependency override to 5.9.3. Both are recorded in this package's
 pnpm configuration/lockfile; reassess them when updating the CLI.
 
+The test runner's Miniflare dependency uses a scoped override to sharp 0.35.5
+for [GHSA-wq5f-xc86-pv6w](https://github.com/lovell/sharp/security/advisories/GHSA-wq5f-xc86-pv6w).
+This development dependency is not part of the sandbox runtime bundle.
+
 Tests use the official production sandbox wrapper and bridge. Negative bridge
 tests can print workerd exception diagnostics; assertions verify contained
 failures and persisted results.

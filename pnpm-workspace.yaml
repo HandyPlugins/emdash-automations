@@ -6,6 +6,7 @@ patchedDependencies:
 
 overrides:
   "@emdash-cms/plugin-cli>typescript": "5.9.3"
+  "miniflare>sharp": "0.35.5"
 
 strictDepBuilds: true
 dangerouslyAllowAllBuilds: false
