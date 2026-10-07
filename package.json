@@ -5,6 +5,11 @@
 	"type": "module",
 	"packageManager": "pnpm@11.9.0",
 	"description": "Automate your EmDash site with triggers and actions.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HandyPlugins/emdash-automations.git"
+	},
 	"engines": { "node": "24.21.0", "pnpm": "11.9.0" },
 	"main": "dist/index.mjs",
 	"exports": {

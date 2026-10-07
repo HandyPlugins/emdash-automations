@@ -2,11 +2,13 @@
 	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
 
 	"slug": "automations",
-	"publisher": "did:web:localhost",
+	"publisher": "did:plc:6kdx7jauswq2awrp3yfxbbw5",
+	"name": "Automations",
 
 	"license": "MIT",
-	"author": { "name": "Local development" },
-	"security": { "email": "security@example.invalid" },
+	"author": { "name": "HandyPlugins", "url": "https://handyplugins.co" },
+	"security": { "email": "support@handyplugins.co" },
+	"repo": "https://github.com/HandyPlugins/emdash-automations",
 	"description": "Automate your EmDash site with triggers and actions.",
 
 	// Minimal event, schema, network, and email access; no CMS write access.

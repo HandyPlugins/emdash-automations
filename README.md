@@ -4,8 +4,10 @@
 
 A sandboxed EmDash plugin with a Block Kit admin page for creating, editing,
 enabling/disabling, deleting automations and inspecting recent execution history.
-Version 0.1.0 is an unpublished development candidate. Publisher, author, and
-security contact are local placeholders that must be replaced before publishing.
+Version 0.1.0 is an unpublished development candidate from
+[HandyPlugins](https://handyplugins.co). The selected publisher account is
+`handyplugins.co`, pinned to DID `did:plc:6kdx7jauswq2awrp3yfxbbw5`.
+Security reports can be sent to `support@handyplugins.co`.
 
 ## Supported behavior
 
@@ -76,6 +78,24 @@ Tests use the official production sandbox wrapper and bridge. Negative bridge
 tests can print workerd exception diagnostics; assertions verify contained
 failures and persisted results.
 
+## Releases
+
+The GitHub release workflow builds tags named `automations@<version>` using
+Node 24.21.0, pnpm 11.9.0, and the locked plugin CLI. It validates the manifest,
+checks types, and runs sandbox tests before building and attesting the bundle.
+The workflow can also be started manually with the package selector
+`automations@0.1.0` for the current candidate.
+
+The package profile requires GitHub build provenance and publisher approval for
+every release. The publisher must authorize publishing in the
+[EmDash release dashboard](https://releases.emdashcms.com), approve the repository
+connection on its first run, and approve each release with a passkey. Account
+sessions remain outside Git and GitHub Actions secrets.
+
+Update the package version before creating a release tag. Published versions
+are immutable. After publication, check the registry listing and test installing
+the release on a sandbox-enabled site before announcing it.
+
 ## Permissions and storage
 
 | Capability | Reason |
@@ -144,6 +164,30 @@ skipped instead of executed. Bump the release version for trust-contract changes
 - [Email](https://docs.emdashcms.com/guides/email/)
 
 APIs were verified against official docs/MCP and installed EmDash 1.1.0
-types/source. Before registry publication, choose the real Atmosphere publisher,
-author, security contact, license holder, and canonical repository URL, then
-verify a registry installation on a sandbox-enabled test site.
+types/source. Before registry publication, authorize the selected publisher
+account, review the release metadata, and complete the release checks. After
+publication, verify a registry installation on a sandbox-enabled test site.
+
+## License
+
+MIT License
+
+Copyright (c) 2026 HandyPlugins
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
