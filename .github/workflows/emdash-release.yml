@@ -73,7 +73,7 @@ jobs:
           subject-path: ${{ steps.prepare.outputs.bundle-file }}
 
       - name: "Publish plugin"
-        uses: emdash-cms/emdash/apps/release-action@2940ab9ddba8e3f56104ce49753a05f28e864bef
+        uses: emdash-cms/emdash/apps/release-action@f1d7127d804f5f1827d9668df686949ce7cc3157
         with:
           service-url: https://releases.emdashcms.com
           publisher-did: ${{ steps.prepare.outputs.publisher-did }}
