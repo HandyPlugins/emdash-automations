@@ -38,15 +38,15 @@
 		"emdash": ">=1.1.0 <2.0.0"
 	},
 	"devDependencies": {
-		"@emdash-cms/plugin-cli": "0.13.2",
+		"@emdash-cms/plugin-cli": "0.13.5",
 		"@emdash-cms/plugin-test": "0.2.7",
-		"emdash": "1.1.0",
+		"emdash": "1.4.0",
 		"typescript": "7.0.2",
 		"vite": "8.3.5",
 		"vitest": "4.1.11"
 	},
 	"dependencies": {
-		"@emdash-cms/blocks": "1.1.0",
-		"zod": "4.6.6"
+		"@emdash-cms/blocks": "1.4.0",
+		"zod": "4.6.7"
 	}
 }
